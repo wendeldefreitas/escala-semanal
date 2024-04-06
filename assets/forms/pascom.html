@@ -1,0 +1,85 @@
+<div class="form-container">
+  <form id="default-form" class="form">
+    <!-- Matriz ou Capela -->
+    <div class="form__local">
+      <div class="box-radio">
+        <label for="radio-matriz">Matriz</label>
+        <input type="radio" name="local" id="radio-matriz" value="Matriz" />
+      </div>
+
+      <div class="box-radio">
+        <label for="radio-capela">Capela</label>
+        <input type="radio" name="local" id="radio-capela" value="Capela" />
+      </div>
+    </div>
+
+    <div class="form__date-and-time">
+      <!-- Data -->
+      <div class="form__date">
+        <label for="data">Data</label>
+        <input type="date" id="data" name="data" required />
+      </div>
+
+      <!-- Hora -->
+      <div class="form__time">
+        <label for="form-time">Hora</label>
+        <input type="time" id="form-time" name="time" required />
+      </div>
+    </div>
+
+    <!-- Rito, Ofício, Celebração -->
+    <div class="form__description">
+      <label for="form-desc">Rito</label>
+      <input type="text" id="form-desc" name="description" />
+    </div>
+
+    <!-- Observações -->
+    <div class="form__observation">
+      <label for="observation">Observações</label>
+      <textarea
+        class="form__observation__textarea"
+        id="observation"
+        name="observation"
+      ></textarea>
+    </div>
+
+    <!-- FUNÇÃO + NOME DE QUEM VAI SERVIR -->
+    <div id="form-role-01" class="form__role container">
+      <h1 class="form__role__title">Servidores</h1>
+      <!-- Função + Nome -->
+      <div class="form__role">
+        <label for="nome-foto">Foto</label>
+        <select name="servant" id="nomes-foto">
+          <option value=" " selected></option>
+          <option value="Giovanna">Giovanna</option>
+          <option value="Lili">Lili</option>
+          <option value="Sara">Sara</option>
+          <option value="Laura">Laura</option>
+          <option value="Fatinha">Fatinha</option>
+          <option value="Juliana">Juliana</option>
+          <option value="Gabriela">Gabriela</option>
+          <option value="Wendel">Wendel</option>
+          <option value="Sandra">Sandra</option>
+          <option value="Hellyda">Hellyda</option>
+        </select>
+      </div>
+      <!-- Função + Nome -->
+      <div class="form__role">
+        <label for="nome-video">Video</label>
+        <select name="servant" id="nomes-video">
+          <option value=" " selected></option>
+          <option value="Giovanna">Giovanna</option>
+          <option value="Lili">Lili</option>
+          <option value="Sara">Sara</option>
+          <option value="Laura">Laura</option>
+          <option value="Fatinha">Fatinha</option>
+          <option value="Juliana">Juliana</option>
+          <option value="Gabriela">Gabriela</option>
+          <option value="Wendel">Wendel</option>
+          <option value="Sandra">Sandra</option>
+          <option value="Hellyda">Hellyda</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
