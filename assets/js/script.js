@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", main);
 
 async function main() {
   const navTabs = document.querySelectorAll(".nav__tab");
+  const actionButtonsContainer = document.querySelector(".action-buttons");
   const formsContainer = document.querySelectorAll(".content__forms");
   const formPascom = await getForm("pascom");
 
@@ -11,8 +12,8 @@ async function main() {
   );
 
   formBuilder(formsContainer, formPascom);
-  const radioInputs = document.querySelectorAll('input[type="radio"]');
-  radioInputs.forEach(radioInputHandle);
+
+  Array.from(actionButtonsContainer.children).forEach(actionButtonsHandle);
 }
 
 async function getForm(formName) {
@@ -54,20 +55,72 @@ function addClass(elements, nameClass) {
   }
 }
 
-function formBuilder(formsParent, form) {
-  formsParent.forEach((parent) => (parent.innerHTML = form));
+function isElementCollection(elements) {
+  return elements instanceof NodeList || elements instanceof HTMLCollection;
 }
 
-function radioInputHandle(input) {
-  input.addEventListener("change", () => {
-    if (input.checked) {
-      addClass(input.parentElement, "box-radio--active");
-    } else {
-      removeClass(input.parentElement, "box-radio--active");
-    }
+function formBuilder(formsParent, form) {
+  formsParent.forEach((parent) => (parent.innerHTML = form));
+  localNameHandle();
+}
+
+function localNameHandle() {
+  const collectionFormLocalName =
+    document.querySelectorAll(".form__local-name");
+
+  collectionFormLocalName.forEach((formLocalName) => {
+    const options = Array.from(formLocalName.children);
+
+    options.forEach((option, index, options) =>
+      option.addEventListener("click", () => {
+        addClass(option, "local-name--active");
+        options.forEach((element) => {
+          if (element != option) removeClass(element, "local-name--active");
+        });
+      })
+    );
   });
 }
 
-function isElementCollection(elements) {
-  return elements instanceof NodeList || elements instanceof HTMLCollection;
+//OS BOTÕES AINDA NÃO FUNCIONAM!
+function actionButtonsHandle(button) {
+  button.addEventListener("click", clickButtonHandle);
+
+  function clickButtonHandle() {
+    const activeContainer = document.querySelector(".content__box--show");
+    const activeForm = document.querySelectorAll('form:not(display="none")');
+
+    switch (button.id) {
+      case "btn-duplicate":
+        if (confirmOperation("DUPLICAR o formulario?"))
+          duplicateForm(activeContainer);
+        break;
+
+      case "btn-reset":
+        if (confirmOperation("APAGAR tudo?")) resetForm(activeForm);
+        break;
+
+      default:
+        console.error("Não existe esse id nos botões de ação");
+        break;
+    }
+  }
+
+  function confirmOperation(string) {
+    return confirm(string);
+  }
+
+  function duplicateForm() {
+    activeForm.appendChild(activeForm.children[1]);
+  }
+
+  function resetForm(forms) {
+    if (isElementCollection(forms)) {
+      forms.forEach((form) => {
+        form.reset();
+      });
+    } else {
+      forms.reset();
+    }
+  }
 }
