@@ -35,19 +35,40 @@ textarea {
   width: 100%;
 }
 
-.form__local-name .local-name {
+.form__local-name > .option-box {
+  position: relative;
   width: 50%;
   height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__local-name .local-name-option,
+.form__local-name > input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.form__local-name > input {
+  opacity: 0;
+}
+
+.form__local-name .local-name-option {
   border-radius: 8px;
-  position: relative;
   text-align: center;
   background-color: #fff;
   border: 1px solid gray;
 }
 
-.form__local-name .local-name--active,
-.form__local-name .local-name:hover {
-  background-color: #c7d2fe;
+.form__local-name .active,
+.form__local-name .local-name-option:hover {
+  font-weight: bold;
+  text-shadow: green 1px 0 10px;
+  color: #fff;
+  background-color: lightgreen;
+  border-color: green;
 }
 
 .form__role__title {

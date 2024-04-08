@@ -1,0 +1,7 @@
+- IMPLEMENTAR BOTOES: Reset, Duplicar, Gerar Texto;
+
+  * Reset => Reseta os valores do formulário atual, ou seja, que está ativo no momento;
+
+  * Duplicar => Duplica o formuário ativo no momento;
+
+  * Gerar Text => Gera o texto de todos os formulário, de todos os dias da semana. Esse texto deve estar em formato de lista para colar no whatsApp;

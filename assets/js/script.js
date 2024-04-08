@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", main);
 async function main() {
   const navTabs = document.querySelectorAll(".nav__tab");
   const actionButtonsContainer = document.querySelector(".action-buttons");
-  const formsContainer = document.querySelectorAll(".content__forms");
+  const formsContainer = document.querySelectorAll(".form-container");
   const formPascom = await getForm("pascom");
 
   navTabs.forEach((tab) =>
@@ -65,39 +65,44 @@ function formBuilder(formsParent, form) {
 }
 
 function localNameHandle() {
-  const collectionFormLocalName =
-    document.querySelectorAll(".form__local-name");
+  const formLocalName = document.querySelector(".form__local-name");
+  const inputs = formLocalName.querySelectorAll("input");
+  const labels = formLocalName.querySelectorAll("label");
 
-  collectionFormLocalName.forEach((formLocalName) => {
-    const options = Array.from(formLocalName.children);
-
-    options.forEach((option, index, options) =>
-      option.addEventListener("click", () => {
-        addClass(option, "local-name--active");
-        options.forEach((element) => {
-          if (element != option) removeClass(element, "local-name--active");
+  inputs.forEach((input) => {
+    input.addEventListener("change", () => {
+      if (input.checked) {
+        labels.forEach((label) => {
+          if (label.getAttribute("for") == input.id) {
+            addClass(label, "active");
+          } else {
+            removeClass(label, "active");
+          }
         });
-      })
-    );
+      }
+    });
   });
 }
 
-//OS BOTÕES AINDA NÃO FUNCIONAM!
 function actionButtonsHandle(button) {
   button.addEventListener("click", clickButtonHandle);
 
   function clickButtonHandle() {
     const activeContainer = document.querySelector(".content__box--show");
-    const activeForm = document.querySelectorAll('form:not(display="none")');
+    const formContainer = activeContainer.querySelector(".form-container");
+    const forms = activeContainer.querySelectorAll(".form");
 
     switch (button.id) {
       case "btn-duplicate":
-        if (confirmOperation("DUPLICAR o formulario?"))
-          duplicateForm(activeContainer);
+        if (confirmOperation("DUPLICAR o formulario?")) {
+          duplicateForm(formContainer, forms);
+        }
         break;
 
       case "btn-reset":
-        if (confirmOperation("APAGAR tudo?")) resetForm(activeForm);
+        if (confirmOperation("APAGAR tudo?")) {
+          resetForm(forms);
+        }
         break;
 
       default:
@@ -110,8 +115,14 @@ function actionButtonsHandle(button) {
     return confirm(string);
   }
 
-  function duplicateForm() {
-    activeForm.appendChild(activeForm.children[1]);
+  function duplicateForm(parent, forms) {
+    if (isElementCollection(forms)) {
+      forms.forEach((form) => {
+        parent.appendChild(form);
+      });
+    } else {
+      parent.appendChild(forms);
+    }
   }
 
   function resetForm(forms) {
