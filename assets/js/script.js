@@ -89,18 +89,18 @@ function actionButtonsHandle(button) {
 
   function clickButtonHandle() {
     const activeContainer = document.querySelector(".content__box--show");
-    const formContainer = activeContainer.querySelector(".form-container");
-    const forms = activeContainer.querySelectorAll(".form");
+    const formParent = activeContainer.querySelector(".content__forms");
+    const forms = formParent.querySelectorAll(".form");
 
     switch (button.id) {
       case "btn-duplicate":
-        if (confirmOperation("DUPLICAR o formulario?")) {
-          duplicateForm(formContainer, forms);
+        if (confirm("DUPLICAR o formulario?")) {
+          // duplicateForm(formParent, formParent.children);
         }
         break;
 
       case "btn-reset":
-        if (confirmOperation("APAGAR tudo?")) {
+        if (confirm("APAGAR tudo?")) {
           resetForm(forms);
         }
         break;
@@ -111,21 +111,25 @@ function actionButtonsHandle(button) {
     }
   }
 
-  function confirmOperation(string) {
-    return confirm(string);
-  }
+  // function duplicateForm(parent, childs) {
+  //   let newForm = document.createElement("div");
 
-  function duplicateForm(parent, forms) {
-    if (isElementCollection(forms)) {
-      forms.forEach((form) => {
-        parent.appendChild(form);
-      });
-    } else {
-      parent.appendChild(forms);
-    }
-  }
+  //   if (isElementCollection(childs)) {
+  //     for (let child of childs) {
+  //       newForm.innerHTML = child.outerHTML;
+  //       console.log(child);
+  //       parent.innerHTML += newForm;
+  //     }
+  //   } else {
+  //     newForm.innerHTML = childs.outerHTML;
+  //     parent.innerHTML += newForm;
+  //   }
+  // }
 
   function resetForm(forms) {
+    const activeInput = document.querySelector(".active");
+    if (activeInput) removeClass(activeInput, "active");
+
     if (isElementCollection(forms)) {
       forms.forEach((form) => {
         form.reset();
