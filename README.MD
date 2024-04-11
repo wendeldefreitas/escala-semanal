@@ -35,8 +35,8 @@ Básicamente este projeto de Escala Semanal são varios formulários web, que fa
     - Nomes pré cadastrados e separados por pastoral
     - Uso de menus intuitivos.
 
-- [] Gerar o conteudo de todos os formulários em forma de lista:
-  - [] Ao clicar no botão de gerar lista, copiar a lista para area de transferência
+- [ ] Gerar o conteudo de todos os formulários em forma de lista:
+  - [ ] Ao clicar no botão de gerar lista, copiar a lista para area de transferência
 
 ---
 
