@@ -1,6 +1,6 @@
 # Escala Semanal
 
-## Criar em estrutura de lista uma escala semanal, prontinha para ser copiada e colada! Inclusive no WhatsApp!
+## Escala semanal em estrutura de lista, prontinha para ser copiada e colada! Inclusive no WhatsApp!
 
 ### Tabela de conteúdos
 
