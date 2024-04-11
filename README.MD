@@ -20,7 +20,7 @@
 
 ## 💻 Sobre o projeto
 
-📆 Escala Semanal - Surgiu da necessidade de facilitar a criação de escalas semanais das pastorais da igreja. Antes eram feitas diretamente no WhastApp, o que dificulta, e muito, a organização.
+📆 Escala Semanal - Surgiu da necessidade de criação de escalas semanais das pastorais da igreja. Antes eram feitas diretamente no WhastApp, o que dificulta, e muito, a organização.
 Básicamente este projeto de Escala Semanal são varios formulários web, que facilitam a construção e organização de escalas semanais que geram uma lista em formato de texto para ser copiada e usada no WhatsApp.
 
 ---
@@ -103,7 +103,13 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 <table>
   <tr>
-    <td align="center"><a href="LINKEDIN"><img style="border-radius: 50%;" src="AVATAR-GITHUB" width="100px;" alt=""/><br /><sub><b>NOME-DO-CABRA</b></sub></a><br /><a href="LINKEDIN" title="linkedin">👨‍🚀</a></td>
+    <td align="center">
+	<a href="https://github.com/kaua-pt/kaua-pt">
+		<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/81399319?v=4" width="100px;" alt=""/><br />
+		<sub><b>Kauã Vinícius</b></sub>
+	</a><br />
+	<a href="https://github.com/kaua-pt" title="Kauã Github">👨‍🚀</a>
+    </td>
 
     <td align="center"><a href="LINKEDIN"><img style="border-radius: 50%;" src="AVATAR-GITHUB" width="100px;" alt=""/><br /><sub><b>NOME-DO-CABRA</b></sub></a><br /><a href="LINKEDIN" title="linkedin">👨‍🚀</a></td>
         
@@ -124,9 +130,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 <a href="https://www.linkedin.com/in/wendel-de-freitas-mendes/">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/19244954?v=4" width="100px;" alt="foto perfil"/>
- <br />
- <sub><b>Wendel de Freitas</b></sub></a> <a href="https://www.linkedin.com/in/wendel-de-freitas-mendes/" title="Linkedin">🚀</a>
- <br />
+ <br /><br />
+ <sub><b>Wendel de Freitas</b></sub></a> <a href="https://www.linkedin.com/in/wendel-de-freitas-mendes/" title="autor Linkedin">🚀</a>
+ <br /><br />
 
 [![Gmail Badge](https://img.shields.io/badge/-wendinhodefreitas@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:wendinhodefreitas@gmail.com)](mailto:wendinhodefreitas@gmail.com)
 
