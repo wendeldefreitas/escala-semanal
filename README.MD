@@ -83,17 +83,17 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 #### **Website**  ([Angular](https://angular.io/)  +  [JavaScript])
 
-#### []**Utilitários**
+#### **Utilitários**
 
--   Protótipo:  **[Figma](https://www.figma.com/)**  →  **[Protótipo (Ecoleta)](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/Ecoleta)**
--   API:  **[IBGE API](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1)**  →  **[API de UFs](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-UFs-estadosGet)**,  **[API de Municípios](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-Municipios-estadosUFMunicipiosGet)**
--   Maps:  **[Leaflet](https://react-leaflet.js.org/en/)**
--   Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**  → Extensions:  **[SQLite](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)**
--   Markdown:  **[StackEdit](https://stackedit.io/)**,  **[Markdown Emoji](https://gist.github.com/rxaviers/7360908)**
--   Commit Conventional:  **[Commitlint](https://github.com/conventional-changelog/commitlint)**
--   Teste de API:  **[Insomnia](https://insomnia.rest/)**
--   Ícones:  **[Feather Icons](https://feathericons.com/)**,  **[Font Awesome](https://fontawesome.com/)**
--   Fontes:  **[Ubuntu](https://fonts.google.com/specimen/Ubuntu)**,  **[Roboto](https://fonts.google.com/specimen/Roboto)**
+-   Protótipo:  
+-   API:  
+-   Maps:  
+-   Editor:  
+-   Markdown: 
+-   Commit Conventional:  
+-   Teste de API:  
+-   Ícones:  
+-   Fontes:  
 
 
 ---
@@ -110,9 +110,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 	</a><br />
 	<a href="https://github.com/kaua-pt" title="Kauã Github">👨‍🚀</a>
     </td>
-
-    <td align="center"><a href="LINKEDIN"><img style="border-radius: 50%;" src="AVATAR-GITHUB" width="100px;" alt=""/><br /><sub><b>NOME-DO-CABRA</b></sub></a><br /><a href="LINKEDIN" title="linkedin">👨‍🚀</a></td>
-        
   </tr>
 </table>
 
