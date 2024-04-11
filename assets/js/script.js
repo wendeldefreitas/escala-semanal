@@ -66,20 +66,20 @@ function formBuilder(formsParent, form) {
 
 function localNameHandle() {
   const formLocalName = document.querySelector(".form__local-name");
-  const inputs = formLocalName.querySelectorAll("input");
-  const labels = formLocalName.querySelectorAll("label");
+  const inputs = formLocalName.querySelectorAll(
+    "input[name='local-name-option']"
+  );
 
-  inputs.forEach((input) => {
-    input.addEventListener("change", () => {
-      if (input.checked) {
-        labels.forEach((label) => {
-          if (label.getAttribute("for") == input.id) {
-            addClass(label, "active");
-          } else {
-            removeClass(label, "active");
-          }
-        });
-      }
+  formLocalName.addEventListener("click", () => {
+    inputs.forEach((input) => {
+      // if (input.checked) {
+      //   addClass(input.nextSibling, "active");
+      //   console.log("ACTIVE" + input.nextSibling); //APAGAR APAGAR APAGAR
+      // } else {
+      //   removeClass(input.nextSibling, "active");
+      //   console.log("TIREI!" + input.nextSibling); //APAGAR APAGAR APAGAR
+      // }
+      console.log(input);
     });
   });
 }
@@ -95,7 +95,7 @@ function actionButtonsHandle(button) {
     switch (button.id) {
       case "btn-duplicate":
         if (confirm("DUPLICAR o formulario?")) {
-          // duplicateForm(formParent, formParent.children);
+          duplicateForm(formParent, forms);
         }
         break;
 
@@ -111,20 +111,14 @@ function actionButtonsHandle(button) {
     }
   }
 
-  // function duplicateForm(parent, childs) {
-  //   let newForm = document.createElement("div");
-
-  //   if (isElementCollection(childs)) {
-  //     for (let child of childs) {
-  //       newForm.innerHTML = child.outerHTML;
-  //       console.log(child);
-  //       parent.innerHTML += newForm;
-  //     }
-  //   } else {
-  //     newForm.innerHTML = childs.outerHTML;
-  //     parent.innerHTML += newForm;
-  //   }
-  // }
+  function duplicateForm(parent, childs) {
+    for (let child of childs) {
+      let newDiv = document.createElement("div");
+      addClass(newDiv, "form-container");
+      newDiv.innerHTML = child.outerHTML;
+      parent.appendChild(newDiv);
+    }
+  }
 
   function resetForm(forms) {
     const activeInput = document.querySelector(".active");

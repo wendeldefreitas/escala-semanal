@@ -5,3 +5,7 @@
   * Duplicar => Duplica o formuário ativo no momento;
 
   * Gerar Text => Gera o texto de todos os formulário, de todos os dias da semana. Esse texto deve estar em formato de lista para colar no whatsApp;
+
+Reset -> Parece estar ok
+Duplicar -> funciona mas gera bugs no design da pagina
+Gerar Texto -> Pesquisar como implementar.
