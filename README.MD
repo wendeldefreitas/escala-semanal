@@ -2,6 +2,10 @@
 
 ## Escala semanal em estrutura de lista, prontinha para ser copiada e colada! Inclusive no WhatsApp!
 
+<h4 align="center"> 
+	🚧  🚀 Em construção...  🚧
+</h4>
+
 ### Tabela de conteúdos
 
 <!--ts-->
@@ -16,10 +20,6 @@
 - [Tests](#testes)
 - [Tecnologias](#tecnologias)
 <!--te-->
-
-<h4 align="center"> 
-	🚧  🚀 Em construção...  🚧
-</h4>
 
 ### Features
 
